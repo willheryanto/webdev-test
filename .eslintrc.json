@@ -1,0 +1,41 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["prettier", "plugin:react/recommended", "next/core-web-vitals"],
+  "env": {
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "import/order": [
+      1,
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "sibling",
+          "parent",
+          "index"
+        ],
+        "pathGroups": [
+          { "pattern": "types", "group": "internal" },
+          { "pattern": "components/**", "group": "internal" },
+          { "pattern": "contexts/**", "group": "internal" },
+          { "pattern": "hooks/**", "group": "internal" },
+          { "pattern": "pages/**", "group": "internal" },
+          { "pattern": "views/**", "group": "internal" },
+          { "pattern": "utils/**", "group": "internal" },
+          { "pattern": "public/**", "group": "internal", "position": "after" },
+          { "pattern": "posts/**", "group": "internal", "position": "after" }
+        ],
+        "pathGroupsExcludedImportTypes": ["internal"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}
