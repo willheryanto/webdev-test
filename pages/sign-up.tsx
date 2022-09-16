@@ -1,22 +1,20 @@
-import type { NextPage } from 'next';
 import styled from 'styled-components';
-import Container from 'components/Container';
+import Page from 'components/Page';
+import FormSection from 'views/SignUpPage/FormSection';
 
-const SignUp: NextPage = () => {
+export default function SignUpPage() {
   return (
-    <PageContainer>
-      <p>SignUp</p>
-    </PageContainer>
+    <Page
+      title="Sign Up"
+      description="Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+    >
+      <SignUpContainer>
+        <FormSection />
+      </SignUpContainer>
+    </Page>
   );
-};
+}
 
-const PageContainer = styled(Container)`
-  position: relative;
+const SignUpContainer = styled.div`
   display: flex;
-  justify-content: flex;
-  align-items: flex;
-  height: 100%;
-  width: 100%;
 `;
-
-export default SignUp;

@@ -1,22 +1,18 @@
-import type { NextPage } from 'next';
 import styled from 'styled-components';
-import Container from 'components/Container';
+import Page from 'components/Page';
 
-const AboutUs: NextPage = () => {
+export default function AboutUsPage() {
   return (
-    <PageContainer>
-      <p>AboutUs</p>
-    </PageContainer>
+    <Page
+      title="About Us"
+      description="Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+    >
+      <AboutUsContainer>
+      </AboutUsContainer>
+    </Page>
   );
-};
+}
 
-const PageContainer = styled(Container)`
-  position: relative;
+const AboutUsContainer = styled.div`
   display: flex;
-  justify-content: flex;
-  align-items: flex;
-  height: 100%;
-  width: 100%;
 `;
-
-export default AboutUs;
