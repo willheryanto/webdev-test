@@ -44,6 +44,7 @@ const NavbarContainer = styled.div`
   width: 100%;
   height: var(--height-navbar);
   z-index: var(--z-navbar);
+  position: sticky;
 
   background-color: rgb(var(--navbarBackground));
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
