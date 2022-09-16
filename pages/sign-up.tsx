@@ -2,10 +2,10 @@ import type { NextPage } from 'next';
 import styled from 'styled-components';
 import Container from 'components/Container';
 
-const Features: NextPage = () => {
+const SignUp: NextPage = () => {
   return (
     <PageContainer>
-      <p>Features</p>
+      <p>SignUp</p>
     </PageContainer>
   );
 };
@@ -19,4 +19,4 @@ const PageContainer = styled(Container)`
   width: 100%;
 `;
 
-export default Features;
+export default SignUp;

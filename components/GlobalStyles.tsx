@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-
 export const GlobalStyle = createGlobalStyle`
 
 .next-light-theme {
@@ -40,6 +39,11 @@ export const GlobalStyle = createGlobalStyle`
   
   --shadow-md: 0 2px 4px 0 rgb(12 0 46 / 4%);
   --shadow-lg: 0 10px 14px 0 rgb(12 0 46 / 6%);
+
+
+  --height-logo: 14rem;
+  --height-navbar: 14rem;
+  --height-navbarSide: 14rem;
 
   --z-sticky: 7777;
   --z-navbar: 8888;
@@ -151,4 +155,3 @@ select {
   }
 
 }`;
-

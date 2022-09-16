@@ -2,20 +2,14 @@ import NextLink from 'next/link';
 import styled from 'styled-components';
 import { SingleNavItem, NavItems } from 'types';
 import Container from './Container';
-import Logo from './Logo';
 
 type NavbarProps = { items: NavItems };
-// type ScrollingDirections = "up" | "down" | "none";
-// type NavbarcontainerProps = { hidden: boolean; transparent: boolean };
 
-export default function Navbar({ items }: NavbarProps) {
+export default function NavbarSide({ items }: NavbarProps) {
   return (
     <>
       <NavbarContainer>
         <Content>
-          <LogoWrapper>
-            <Logo />
-          </LogoWrapper>
           <NavItemList>
             {items.map((item) => (
               <NavItem key={item.href} {...item} />
@@ -39,10 +33,12 @@ function NavItem({ href, title, underlined }: SingleNavItem) {
 
 const NavbarContainer = styled.div`
   display: flex;
-  top: 0;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
   padding: 1.5rem 0;
-  width: 100%;
-  height: var(--height-navbar);
+  width: 7.5%;
+  height: 100vw;
   z-index: var(--z-navbar);
 
   background-color: rgb(var(--navbarBackground));
@@ -55,21 +51,11 @@ const NavbarContainer = styled.div`
 
 const Content = styled(Container)`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 
-const LogoWrapper = styled.a`
-  display: flex;
-  height: var(--height-logo);
-  text-decoration: none;
-
-  color: rgb(var(--logoColor));
-`;
-
 const NavItemList = styled.div`
-  display: flex;
   list-style: none;
 `;
 
@@ -79,10 +65,16 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
   text-transform: uppercase;
   line-height: 2;
 
+  &:hover {
+    background-color: ${(p) => (p.underlined ? 'rgb(var(--primary), 0.8)' : 'transparent')};
+    transition: background-color 0.2s;
+  }
+
   a {
     display: flex;
-    text-decoration: none;
+    color: ${(p) => (p.underlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')};
     letter-spacing: 0.025em;
+    text-decoration: none;
     padding: 0.75rem 1.5rem;
     font-weight: 700;
   }
