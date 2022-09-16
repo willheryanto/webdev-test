@@ -18,7 +18,7 @@ const PARTNER_LOGOS = [
 export default function Clients() {
   return (
     <PartnersWrapper>
-      <Title>Client that use us</Title>
+      <Title>Client that happy with us!</Title>
 
       <Swiper
         modules={[Autoplay]}

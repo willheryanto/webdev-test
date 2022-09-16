@@ -35,7 +35,7 @@ const NavbarContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  left: 0;
+  top: 0;
   padding: 1.5rem 0;
   width: 7.5%;
   height: 100vw;
@@ -51,6 +51,7 @@ const NavbarContainer = styled.div`
 
 const Content = styled(Container)`
   display: flex;
+  top: var(--height-navbar);
   justify-content: flex-start;
   align-items: center;
 `;

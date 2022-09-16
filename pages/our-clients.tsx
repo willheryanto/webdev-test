@@ -1,35 +1,24 @@
 import type { NextPage } from 'next';
 import styled from 'styled-components';
 import Container from 'components/Container';
+import Page from 'components/Page';
 import Clients from 'views/HomePage/Clients';
 
 const OurClients: NextPage = () => {
   return (
-    <PageContainer>
-      <Title>Our Clients</Title>
-      <Clients />
-    </PageContainer>
+    <Page
+      title="Our Clients"
+      description="Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+    >
+      <OurClientsPage>
+        <Clients />
+      </OurClientsPage>
+    </Page>
   );
 };
 
-const Title = styled.h3`
-  font-size: 4rem;
-  letter-spacing: 0.02em;
-  line-height: 0;
-  text-transform: uppercase;
-  margin-bottom: 10rem;
-  text-align: center;
-  opacity: 0.8;
-`;
-
-const PageContainer = styled(Container)`
-  top: var(--height-navbar);
+const OurClientsPage = styled(Container)`
   display: flex;
-  position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2px;
 `;
 
 export default OurClients;

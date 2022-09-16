@@ -24,6 +24,7 @@ const PageContainer = styled(Container)`
   top: var(--height-navbar);
   display: flex;
   padding: 2px;
+  display: flex;
 `;
 
 const Contents = styled.div`
