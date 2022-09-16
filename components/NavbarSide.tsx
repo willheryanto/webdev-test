@@ -42,7 +42,6 @@ const NavbarContainer = styled.div`
   z-index: var(--z-navbar);
 
   background-color: rgb(var(--navbarBackground));
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
 
   transition-property: transform, visibility, height, box-shadow, background-color;
   transition-duration: 0.15s;
